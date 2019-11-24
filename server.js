@@ -93,3 +93,15 @@ app.route('/edit/:id').get((req, res) => {
         res.redirect('/administrator')
     })
 })
+
+// DELETE CAR
+app.route('/delete/:id').get((req, res) => {
+    var ObjectId = require('mongodb').ObjectID;
+    var id = req.params.id
+
+    db.collection('data').deleteOne({ _id: ObjectId.createFromHexString(id) }, (err, result) => {
+        if (err) return res.send(err)
+        res.redirect('/administrator')
+    })
+
+})

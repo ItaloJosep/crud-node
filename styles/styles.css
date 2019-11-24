@@ -171,6 +171,20 @@ header h1 {
     margin: 0 auto;
 }
 
+.buttom-new-car {
+    padding: 0.8em 1.5em 0.8em 1.5em;
+    background: #3381ae;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    font-size: 1.5em;
+}
+
+.buttom-new-car a {
+    text-decoration: none;
+    color: white;
+}
+
 .contact input[type="text"],
 .contact input[type="email"],
 .contact textarea {
