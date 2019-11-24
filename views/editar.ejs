@@ -28,18 +28,20 @@
     <div class="container-full">
         <div class="container-default no-margim">
             <h2 class="title">Cadastro</h2>
-            <form class="contact" action="/administrator/cadastrar" method="POST">
-                <input name="marca" type="text" placeholder="Marca*" required>
-                <input name="modelo" type="text" placeholder="Modelo*" required>
-                <input name="cor" type="text" placeholder="Cor*">
-                <input name="ano" type="text" placeholder="Ano*">
-                <input name="preco" type="text" placeholder="Preço*">
-                <input name="urlfoto" type="text" placeholder="URL da foto">
-                <textarea name="descricao" placeholder="Descrição*" required></textarea>
+            <% data.forEach(function(car) { %>
+                <form class="contact" action="/edit/<%= car._id %>" method="POST">
+                    <input name="marca" type="text" value="<%= car.marca %>" placeholder="Marca*" required>
+                    <input name="modelo" type="text" value="<%= car.modelo %>" placeholder="Modelo*" required>
+                    <input name="cor" type="text" value="<%= car.cor %>" placeholder="Cor*">
+                    <input name="ano" type="text" value="<%= car.ano %>" placeholder="Ano*">
+                    <input name="preco" type="text" value="<%= car.preco %>" placeholder="Preço*">
+                    <input name="urlfoto" type="text" value="<%= car.urlfoto %>" placeholder="URL da foto">
+                    <textarea name="descricao" placeholder="Descrição*" required><%= car.descricao %></textarea>
 
-                <input type="reset" value="Limpar" />
-                <input type="submit" value="Cadastrar" />
-            </form>
+                    <input type="reset" value="Limpar" />
+                    <input type="submit" value="Cadastrar" />
+                </form>
+                <% }) %>
         </div>
     </div>
 

@@ -14,28 +14,19 @@
 </head>
 
 <body>
-    <header class="header">
-
-        <div class="container-default container-header">
-            <div class="name-function">
+    <header class="header-administrator">
+        <div class="container-default container-header-administrator">
+            <div>
                 <p>
                     <h1>Luxury Cars<br/></h1>
                     <h2>Sua loja de veículos de luxo!</h2>
                 </p>
             </div>
         </div>
-
     </header>
 
-    <div class="container-default container-about">
-        <h2>Sobre a loja</h2>
-        <p class="text-about">
-            Somos uma loja de venda de carros de luxo, com mais de 15 anos de mercado, estamos na cidade de Belo Horizonte em Minas Gerais, e despachamos o veículo com toda segunça e proteção para todo o Brasil.
-        </p>
-    </div>
-
     <div class="container-default">
-        <h2 class="title">Carros</h2>
+        <h2 class="title">Carros cadastrados</h2>
 
         <% data.forEach(function(car) { %>
             <div class="container-list">
@@ -56,29 +47,18 @@
                         <%= car.descricao %>
                     </h4>
                 </div>
+                <div class="icon-list">
+                    <a href="/edit/<%= car._id %>">
+                        <img src="/assets/img/edit.png" />
+                    </a>
+                </div>
+                <div class="icon-list">
+                    <a href="/delete/<%= car._id %>">
+                        <img src="/assets/img/trash.png" />
+                    </a>
+                </div>
             </div>
             <% }) %>
     </div>
 
-    <div class="container-full">
-        <div class="container-default no-margim">
-            <h2 class="title">Contato</h2>
-            <form class="contact">
-                <input id="name" type="text" placeholder="Nome*" required>
-                <input id="email" type="email" placeholder="E-mail*" required>
-                <input id="subject" type="text" placeholder="Assunto">
-                <textarea id="description" placeholder="Mensagem*" required></textarea>
-
-                <input type="reset" value="Limpar" />
-                <input type="submit" value="Enviar" />
-            </form>
-        </div>
-    </div>
-
-    <footer>
-        <p>Feito com <i>♥</i> em Betim-MG<br/>© Copyright 2019-2019, direitos reservados</p>
-    </footer>
-
 </body>
-
-</html>

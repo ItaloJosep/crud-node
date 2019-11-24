@@ -138,11 +138,23 @@ header h1 {
     border-radius: 0.6em;
 }
 
+.icon-list {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.icon-list img {
+    width: 2em;
+    height: 2em;
+}
+
 .description-list {
     display: inline-block;
     vertical-align: top;
     margin-left: 1em;
-    width: 70%;
+    width: 85%;
 }
 
 .description-list p {
@@ -251,11 +263,6 @@ footer i {
     color: red;
     font-size: 1.3em;
     margin: 0 0.2em;
-}
-
-.footer-administrator {
-    position: absolute;
-    top: calc(100% - 7.8em);
 }
 
 .gallery {
