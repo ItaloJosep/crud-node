@@ -1,0 +1,278 @@
+@font-face {
+    font-family: aboutFont;
+    src: url(/../assets/font/Letters-for-Learners.ttf);
+}
+
+body {
+    font-size: 12px;
+    margin: 0;
+}
+
+h2 {
+    font-family: aboutFont;
+    font-style: oblique;
+    color: gray;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: aboutFont;
+    font-style: oblique;
+    color: rgb(59, 59, 59);
+    font-size: 2em;
+    margin: 0;
+}
+
+h4 {
+    font-family: aboutFont;
+    font-style: oblique;
+    color: gray;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.container-default {
+    width: 80%;
+    display: block;
+    margin-top: 1em;
+    margin: 4em auto;
+}
+
+.no-margim {
+    margin: 4em auto 0 auto;
+}
+
+.container-default .title {
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    height: 36em;
+    background-color: #323232;
+    display: flex;
+    background-image: url(/../assets/img/wallpaper-car.jpg);
+    background-position: center;
+}
+
+header h1 {
+    font-family: aboutFont;
+    color: #212020;
+    font-size: 4.5em;
+}
+
+.container-header {
+    margin: 8em auto;
+    text-align: center;
+}
+
+.avatar {
+    display: inline-block;
+    width: 16em;
+    height: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    border-radius: 0.6em;
+}
+
+.name-function {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.name-function h2 {
+    color: #585858
+}
+
+.container-about {
+    width: 45%;
+    text-align: center;
+    margin: 5em auto;
+}
+
+.text-about {
+    font-size: 1.7em;
+    font-family: aboutFont;
+    font-style: italic;
+    color: #544f4f;
+}
+
+.container-list {
+    padding: 2em;
+    position: initial;
+    margin-top: 0em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.32);
+}
+
+.avatar-list {
+    width: 5em;
+    height: 5em;
+    display: inline-block;
+    border-radius: 0.6em;
+}
+
+.avatar-list img {
+    width: 5em;
+    height: 5em;
+    border-radius: 0.6em;
+}
+
+.description-list {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 1em;
+    width: 70%;
+}
+
+.description-list p {
+    font-family: aboutFont;
+    font-style: oblique;
+    color: rgb(59, 59, 59);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.contact {
+    font-family: aboutFont;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    padding: 1em;
+    color: #555;
+    font-size: 1.5em;
+    font-family: aboutFont;
+}
+
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.contact textarea:focus {
+    box-shadow: 0 0 5px #3381ae;
+    padding: 1em;
+    border: 1px solid #3381ae;
+}
+
+.contact input[type="submit"],
+.contact input[type="reset"] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 1em 2em 1em 2em;
+    background: #3381ae;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 0.5em 2em 0;
+}
+
+.contact input[type="submit"]:hover,
+.contact input[type="reset"]:hover {
+    background: gray;
+}
+
+footer {
+    width: 80%;
+    height: auto;
+    padding: 2em 10% 1em 10%;
+    background-color: #323232;
+}
+
+footer .gallery {
+    font-size: 2em;
+    color: gray;
+    font-family: aboutFont;
+    font-style: oblique;
+    margin: 0 0 0em 0;
+}
+
+.social-media {
+    margin: 1em 0;
+}
+
+.social-media img {
+    width: 2em;
+    height: auto;
+    border-radius: 0.5em;
+}
+
+.social-media a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #D2D2D2;
+    vertical-align: bottom;
+}
+
+footer p {
+    font-size: 1em;
+    color: #D2D2D2;
+    text-align: center;
+}
+
+footer i {
+    font-style: normal;
+    color: red;
+    font-size: 1.3em;
+    margin: 0 0.2em;
+}
+
+.gallery {
+    text-align: center;
+}
+
+.photo {
+    width: 30em;
+    display: inline-block;
+    margin: 2em;
+    vertical-align: middle;
+}
+
+.photo img {
+    width: 30em;
+    border-radius: 0.8em;
+}
+
+@-webkit-keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
