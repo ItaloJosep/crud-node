@@ -66,6 +66,26 @@ header h1 {
     text-align: center;
 }
 
+.header-administrator {
+    width: 100%;
+    height: 10em;
+    background-color: #323232;
+    display: flex;
+    background-image: url(/../assets/img/wallpaper-car.jpg);
+    background-position: center;
+}
+
+.header-administrator h1 {
+    font-family: aboutFont;
+    color: #212020;
+    font-size: 2.5em;
+}
+
+.container-header-administrator {
+    margin: auto;
+    text-align: center;
+}
+
 .avatar {
     display: inline-block;
     width: 16em;
@@ -231,6 +251,11 @@ footer i {
     color: red;
     font-size: 1.3em;
     margin: 0 0.2em;
+}
+
+.footer-administrator {
+    position: absolute;
+    top: calc(100% - 7.8em);
 }
 
 .gallery {

@@ -23,7 +23,6 @@
                     <h2>Sua loja de veículos de luxo!</h2>
                 </p>
             </div>
-
         </div>
 
     </header>
@@ -37,16 +36,28 @@
 
     <div class="container-default">
         <h2 class="title">Carros</h2>
-        <div class="container-list">
-            <div class="avatar-list">
-                <!-- <img src="src/imagem/ic-pucminas.png" alt="UFV logo" /> -->
-            </div>
-            <div class="description-list">
-                <h3>Fiat Uno 1997</h3>
-                <h4>R$ 100.000,00</h4>
-            </div>
-        </div>
 
+        <% data.forEach(function(car) { %>
+            <div class="container-list">
+                <div class="avatar-list">
+                    <img src="<%= car.urlfoto %>" alt="UFV logo" />
+                </div>
+                <div class="description-list">
+                    <h3>
+                        <%= car.marca %>
+                            <%= car.modelo %>,
+                                <%= car.cor %>,
+                                    <%= car.ano %>
+                    </h3>
+                    <h4>
+                        <%= car.preco %>
+                    </h4>
+                    <h4>
+                        <%= car.descricao %>
+                    </h4>
+                </div>
+            </div>
+            <% }) %>
     </div>
 
     <div class="container-full">
