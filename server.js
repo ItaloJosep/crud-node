@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-
 const MongoClient = require('mongodb').MongoClient;
 
 app.use('/styles', express.static('styles'));
@@ -18,9 +17,7 @@ MongoClient.connect(uri, (err, client) => {
         console.log('Click to acess http:localhost:4200')
     })
 })
-
 app.use(bodyParser.urlencoded({ extended: true }))
-
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
@@ -30,11 +27,26 @@ app.get('/', (req, res) => {
     })
 })
 
+// CONTACT CREATE
+app.post('/contact', (req, res) => {
+    db.collection('contact').save(req.body, (err, result) => {
+        if (err) return console.log(err)
+        res.redirect('/')
+    })
+})
+
 //ADMINISTRATOR
 app.get('/administrator', (req, res) => {
     db.collection('data').find().toArray((err, results) => {
         if (err) return console.log(err)
-        res.render('administrator.ejs', { data: results })
+
+        db.collection('contact').find().toArray((err, contact) => {
+            if (err) return console.log(err)
+            console.log(results)
+            console.log(contact)
+            res.render('administrator.ejs', { data: results, contacts: contact })
+        })
+
     })
 })
 
@@ -46,8 +58,6 @@ app.get('/administrator/cadastro', (req, res) => {
 app.post('/administrator/cadastrar', (req, res) => {
     db.collection('data').save(req.body, (err, result) => {
         if (err) return console.log(err)
-
-        console.log('Salvo no Banco de Dados')
         res.redirect('/administrator')
     })
 })
@@ -75,8 +85,6 @@ app.route('/edit/:id').get((req, res) => {
     var preco = req.body.preco
     var descricao = req.body.descricao
     var urlfoto = req.body.urlfoto
-
-
 
     db.collection('data').updateOne({ _id: ObjectId.createFromHexString(id) }, {
         $set: {

@@ -63,11 +63,11 @@
     <div class="container-full">
         <div class="container-default no-margim">
             <h2 class="title">Contato</h2>
-            <form class="contact">
-                <input id="name" type="text" placeholder="Nome*" required>
-                <input id="email" type="email" placeholder="E-mail*" required>
-                <input id="subject" type="text" placeholder="Assunto">
-                <textarea id="description" placeholder="Mensagem*" required></textarea>
+            <form class="contact" action="/contact" method="POST">
+                <input name="name" type="text" placeholder="Nome*" required>
+                <input name="email" type="email" placeholder="E-mail*" required>
+                <input name="subject" type="text" placeholder="Assunto">
+                <textarea name="description" placeholder="Mensagem*" required></textarea>
 
                 <input type="reset" value="Limpar" />
                 <input type="submit" value="Enviar" />

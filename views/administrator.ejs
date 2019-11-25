@@ -64,6 +64,25 @@
                 </div>
             </div>
             <% }) %>
-    </div>
 
+                <h2 class="title">Mensagens dos clientes</h2>
+                <% contacts.forEach(function(contact) { %>
+                    <div class="container-list">
+                        <div class="description-list">
+                            <h3>
+                                <%= contact.name %>
+                            </h3>
+                            <h4>
+                                <%= contact.email %>
+                            </h4>
+                            <h4>
+                                <%= contact.subject %>
+                            </h4>
+                            <h4>
+                                <%= contact.description %>
+                            </h4>
+                        </div>
+                    </div>
+                    <% }) %>
+    </div>
 </body>
